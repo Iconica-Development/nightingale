@@ -1,0 +1,19 @@
+name: nightingale_workspace
+version: 0.0.1
+repository: https://github.com/Iconica-Development/nightingale/
+description: A library for managing migrations.
+
+publish_to: https://forgejo.internal.iconica.nl/api/packages/internal/pub/
+
+environment:
+  sdk: ">=3.10.0 <4.0.0"
+
+workspace:
+  - packages/nightingale
+  - packages/postgres_nightingale
+
+dev_dependencies:
+  melos: ^7.4.0
+  flutter_iconica_analysis:
+    hosted: https://forgejo.internal.iconica.nl/api/packages/internal/pub/
+    version: ^8.0.0

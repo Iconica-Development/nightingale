@@ -1,0 +1,17 @@
+name: Iconica Standard Melos CI Workflow
+# Workflow Caller version: 1.0.0
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  call-global-iconica-workflow:
+    uses: Iconica-Development/.github/.github/workflows/melos-ci.yml@master
+    secrets: inherit
+    permissions: write-all
+    with:
+      flutter_version: "3.22.0"

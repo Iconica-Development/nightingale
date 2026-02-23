@@ -1,0 +1,22 @@
+name: postgres_nightingale
+version: 0.0.1
+repository: https://github.com/Iconica-Development/nightingale/
+description: A package for managing migrations in postgres
+
+publish_to: https://forgejo.internal.iconica.nl/api/packages/internal/pub/
+
+environment:
+  sdk: ^3.10.0
+
+resolution: workspace
+
+dependencies:
+  meta: ^1.17.0
+  nightingale:
+    hosted: https://forgejo.internal.iconica.nl/api/packages/internal/pub/
+    version: ^0.0.1
+  postgres: ^3.5.9
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.24.0

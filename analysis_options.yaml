@@ -1,0 +1,15 @@
+include: package:flutter_iconica_analysis/analysis_options.yaml
+
+linter:
+  rules:
+    prefer_final_parameters: false
+    avoid_final_parameters: false
+
+formatter:
+  trailing_commas: preserve
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "poc/**/*.dart"
