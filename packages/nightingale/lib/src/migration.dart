@@ -16,8 +16,8 @@ class Migration<T> {
 
   factory Migration.multi(
     String name, {
-    required List<Migration> migrations,
-  }) => Migration(
+    required List<Migration<T>> migrations,
+  }) => Migration<T>(
     name,
     forward: (database) async {
       for (final migration in migrations) {
@@ -35,7 +35,7 @@ class Migration<T> {
     String name, {
     required String forward,
     required String backward,
-  }) => Migration(
+  }) => Migration<T>(
     name,
     forward: (database) => database.executeCommand(forward),
     backward: (database) => database.executeCommand(backward),
@@ -45,7 +45,7 @@ class Migration<T> {
     String name, {
     required String forward,
     required String backward,
-  }) => Migration(
+  }) => Migration<T>(
     name,
     forward: (database) => database.executeFile(forward),
     backward: (database) => database.executeFile(backward),
